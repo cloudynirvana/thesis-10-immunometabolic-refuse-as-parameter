@@ -1,0 +1,629 @@
+{
+  "seed_base": 20260921,
+  "seeds": {
+    "D_absent": 20260921,
+    "D_present": 20260922,
+    "D_temptation": 20260923
+  },
+  "cv": 0.03,
+  "obs_floor": 0.05,
+  "t_end": 40.0,
+  "n_obs": 21,
+  "x0": [
+    0.25,
+    0.3,
+    0.05
+  ],
+  "theta_true": {
+    "r": 0.3,
+    "K": 1.2,
+    "kappa": 0.5,
+    "sigma": 0.12,
+    "delta": 0.25,
+    "pi": 0.7,
+    "lam": 0.55
+  },
+  "theta_length_legal": 7,
+  "functionals": {
+    "t_grid": [
+      0.0,
+      2.0,
+      4.0,
+      6.0,
+      8.0,
+      10.0,
+      12.0,
+      14.0,
+      16.0,
+      18.0,
+      20.0,
+      22.0,
+      24.0,
+      26.0,
+      28.0,
+      30.0,
+      32.0,
+      34.0,
+      36.0,
+      38.0,
+      40.0
+    ],
+    "M_base_terminal": {
+      "T": 0.24987144207508538,
+      "E": 0.47999182615085145,
+      "L": 0.3196336721814521
+    },
+    "M_ck_terminal": {
+      "T": 0.6713262646095021,
+      "E": 0.47999182619772396,
+      "L": 0.8540299333862621
+    },
+    "generator_terminal": {
+      "T": 0.7772117173387654,
+      "E": 0.20347719895393016,
+      "L": 0.9804884559058867,
+      "beta": 0.35
+    },
+    "rss_temptation": {
+      "legal_M_base_frozen": 29.463711043596433,
+      "legal_M_ck_frozen": 20.59503062223291,
+      "generator_with_beta": 0.05808975074147614,
+      "least_squares_theta_plus_beta": 0.04894479472550079
+    }
+  },
+  "scenarios": {
+    "checkpoint_absent_band_loose": [
+      {
+        "hypothesis": "M_base",
+        "structure": "M_base",
+        "admissible": true,
+        "reasons": [],
+        "terminal_L": 0.3196336721814521,
+        "rss": 0.04950417489997775,
+        "theta_names": [
+          "r",
+          "K",
+          "kappa",
+          "sigma",
+          "delta",
+          "pi",
+          "lam"
+        ],
+        "theta_length": 7,
+        "rank": 1
+      },
+      {
+        "hypothesis": "M_supply",
+        "structure": "M_base",
+        "admissible": false,
+        "reasons": [
+          "sigma_above_host_budget"
+        ],
+        "terminal_L": 8.219035916030276e-07,
+        "rss": 97.10045154549604,
+        "theta_names": [
+          "r",
+          "K",
+          "kappa",
+          "sigma",
+          "delta",
+          "pi",
+          "lam"
+        ],
+        "theta_length": 7,
+        "rank": null
+      }
+    ],
+    "checkpoint_present_band_loose": [
+      {
+        "hypothesis": "M_base",
+        "structure": "M_base",
+        "admissible": true,
+        "reasons": [],
+        "terminal_L": 0.3196336721814521,
+        "rss": 11.164506184133582,
+        "theta_names": [
+          "r",
+          "K",
+          "kappa",
+          "sigma",
+          "delta",
+          "pi",
+          "lam"
+        ],
+        "theta_length": 7,
+        "rank": 2
+      },
+      {
+        "hypothesis": "M_ck",
+        "structure": "M_ck",
+        "admissible": true,
+        "reasons": [],
+        "terminal_L": 0.8540299333862621,
+        "rss": 0.05377877174533868,
+        "theta_names": [
+          "r",
+          "K",
+          "kappa",
+          "sigma",
+          "delta",
+          "pi",
+          "lam"
+        ],
+        "theta_length": 7,
+        "rank": 1
+      },
+      {
+        "hypothesis": "M_supply",
+        "structure": "M_base",
+        "admissible": false,
+        "reasons": [
+          "sigma_above_host_budget"
+        ],
+        "terminal_L": 8.219035916030276e-07,
+        "rss": 99.12480894184318,
+        "theta_names": [
+          "r",
+          "K",
+          "kappa",
+          "sigma",
+          "delta",
+          "pi",
+          "lam"
+        ],
+        "theta_length": 7,
+        "rank": null
+      }
+    ],
+    "checkpoint_present_band_tight": [
+      {
+        "hypothesis": "M_base",
+        "structure": "M_base",
+        "admissible": true,
+        "reasons": [],
+        "terminal_L": 0.3196336721814521,
+        "rss": 11.164506184133582,
+        "theta_names": [
+          "r",
+          "K",
+          "kappa",
+          "sigma",
+          "delta",
+          "pi",
+          "lam"
+        ],
+        "theta_length": 7,
+        "rank": 1
+      },
+      {
+        "hypothesis": "M_ck",
+        "structure": "M_ck",
+        "admissible": false,
+        "reasons": [
+          "terminal_lactate_outside_host_band"
+        ],
+        "terminal_L": 0.8540299333862621,
+        "rss": 0.05377877174533868,
+        "theta_names": [
+          "r",
+          "K",
+          "kappa",
+          "sigma",
+          "delta",
+          "pi",
+          "lam"
+        ],
+        "theta_length": 7,
+        "rank": null
+      },
+      {
+        "hypothesis": "M_supply",
+        "structure": "M_base",
+        "admissible": false,
+        "reasons": [
+          "sigma_above_host_budget"
+        ],
+        "terminal_L": 8.219035916030276e-07,
+        "rss": 99.12480894184318,
+        "theta_names": [
+          "r",
+          "K",
+          "kappa",
+          "sigma",
+          "delta",
+          "pi",
+          "lam"
+        ],
+        "theta_length": 7,
+        "rank": null
+      }
+    ]
+  },
+  "gate": {
+    "blocked_beta_gamma_eta": {
+      "proposed_names": [
+        "r",
+        "K",
+        "kappa",
+        "sigma",
+        "delta",
+        "pi",
+        "lam",
+        "beta",
+        "gamma",
+        "eta"
+      ],
+      "refused_hits": [
+        "beta",
+        "gamma",
+        "eta"
+      ],
+      "accepted": false,
+      "written_theta": [
+        "r",
+        "K",
+        "kappa",
+        "sigma",
+        "delta",
+        "pi",
+        "lam"
+      ]
+    },
+    "blocked_phi": {
+      "proposed_names": [
+        "r",
+        "K",
+        "kappa",
+        "sigma",
+        "delta",
+        "pi",
+        "lam",
+        "phi"
+      ],
+      "refused_hits": [
+        "phi"
+      ],
+      "accepted": false,
+      "written_theta": [
+        "r",
+        "K",
+        "kappa",
+        "sigma",
+        "delta",
+        "pi",
+        "lam"
+      ]
+    },
+    "blocked_host_symbols": {
+      "proposed_names": [
+        "r",
+        "K",
+        "kappa",
+        "sigma",
+        "delta",
+        "pi",
+        "lam",
+        "sigma_host",
+        "L_hi"
+      ],
+      "refused_hits": [
+        "sigma_host",
+        "L_hi"
+      ],
+      "accepted": false,
+      "written_theta": [
+        "r",
+        "K",
+        "kappa",
+        "sigma",
+        "delta",
+        "pi",
+        "lam"
+      ]
+    },
+    "allowed_legal": {
+      "proposed_names": [
+        "r",
+        "K",
+        "kappa",
+        "sigma",
+        "delta",
+        "pi",
+        "lam"
+      ],
+      "refused_hits": [],
+      "accepted": true,
+      "written_theta": [
+        "r",
+        "K",
+        "kappa",
+        "sigma",
+        "delta",
+        "pi",
+        "lam"
+      ]
+    },
+    "blocked_fit_write": {
+      "proposed_names": [
+        "r",
+        "K",
+        "kappa",
+        "sigma",
+        "delta",
+        "pi",
+        "lam",
+        "beta"
+      ],
+      "refused_hits": [
+        "beta"
+      ],
+      "accepted": false,
+      "written_theta": [
+        "r",
+        "K",
+        "kappa",
+        "sigma",
+        "delta",
+        "pi",
+        "lam"
+      ]
+    }
+  },
+  "illegal_fit": {
+    "success": true,
+    "nfev": 37,
+    "cost": 0.0244723973627504,
+    "rss": 0.04894479472550079,
+    "theta_hat": {
+      "r": 0.7464343522930089,
+      "K": 1.3201438167033144,
+      "kappa": 1.5481761358376205,
+      "sigma": 0.13515478975876719,
+      "delta": 0.28315778697984445,
+      "pi": 0.6247349510995646,
+      "lam": 0.4892669801501306,
+      "beta": 0.39556958014647947
+    },
+    "message": "`ftol` termination condition is satisfied."
+  },
+  "fisher": {
+    "parameter_order": [
+      "r",
+      "K",
+      "kappa",
+      "sigma",
+      "delta",
+      "pi",
+      "lam"
+    ],
+    "eigenvalues_desc": [
+      24019019.25570953,
+      306992.99836593267,
+      62999.42090063305,
+      4183.835441971951,
+      487.7808550703267,
+      203.7172015573158,
+      13.891168119714058
+    ],
+    "weak_eigenvector": {
+      "r": 0.060858700418631555,
+      "K": -0.9939921427083307,
+      "kappa": -0.02321900262741481,
+      "sigma": -0.034775122618047105,
+      "delta": -0.07547116893577296,
+      "pi": -0.02162853588141485,
+      "lam": -0.019071357488105938
+    },
+    "rank": 6,
+    "dimension": 7,
+    "condition_number": 1729085.635470946,
+    "illegal_dimension_if_beta_added": 8,
+    "rank_if_beta_column_kept": 7,
+    "rank_after_gate_drops_beta_column": 6,
+    "tolerance_rule": "eigenvalue > 1e-6 * largest eigenvalue",
+    "tolerance_value": 24.019019255709527
+  },
+  "ledger": {
+    "object": "refuse-as-parameter ledger",
+    "refused_names": [
+      "beta",
+      "gamma",
+      "eta",
+      "phi",
+      "L_lo",
+      "L_hi",
+      "sigma_host",
+      "checkpoint"
+    ],
+    "legal_theta_names": [
+      "r",
+      "K",
+      "kappa",
+      "sigma",
+      "delta",
+      "pi",
+      "lam"
+    ],
+    "constants": {
+      "phi": 0.55,
+      "sigma_host": 0.2,
+      "sigma_supply_alt": 0.35,
+      "band_loose": [
+        0.0,
+        1.5
+      ],
+      "band_tight": [
+        0.0,
+        0.45
+      ]
+    },
+    "evidence_objects": [
+      {
+        "id": "ev.lactate",
+        "kind": "trajectory",
+        "channels": [
+          "L"
+        ],
+        "role": "recorded series and host band; not a kinetic coefficient",
+        "bands": {
+          "loose": [
+            0.0,
+            1.5
+          ],
+          "tight": [
+            0.0,
+            0.45
+          ]
+        }
+      },
+      {
+        "id": "ev.checkpoint",
+        "kind": "categorical_proxy",
+        "levels": [
+          "absent",
+          "present"
+        ],
+        "role": "selects whether M_ck is in the candidate set; not a rate and not a dose",
+        "phi_if_present": 0.55
+      },
+      {
+        "id": "ev.host",
+        "kind": "inequality",
+        "statement": "sigma <= sigma_host",
+        "sigma_host": 0.2,
+        "role": "feasibility mask; the ceiling is not estimated"
+      }
+    ],
+    "proposals": [
+      {
+        "proposed_names": [
+          "r",
+          "K",
+          "kappa",
+          "sigma",
+          "delta",
+          "pi",
+          "lam",
+          "beta",
+          "gamma",
+          "eta"
+        ],
+        "refused_hits": [
+          "beta",
+          "gamma",
+          "eta"
+        ],
+        "accepted": false,
+        "written_theta": [
+          "r",
+          "K",
+          "kappa",
+          "sigma",
+          "delta",
+          "pi",
+          "lam"
+        ]
+      },
+      {
+        "proposed_names": [
+          "r",
+          "K",
+          "kappa",
+          "sigma",
+          "delta",
+          "pi",
+          "lam",
+          "phi"
+        ],
+        "refused_hits": [
+          "phi"
+        ],
+        "accepted": false,
+        "written_theta": [
+          "r",
+          "K",
+          "kappa",
+          "sigma",
+          "delta",
+          "pi",
+          "lam"
+        ]
+      },
+      {
+        "proposed_names": [
+          "r",
+          "K",
+          "kappa",
+          "sigma",
+          "delta",
+          "pi",
+          "lam",
+          "sigma_host",
+          "L_hi"
+        ],
+        "refused_hits": [
+          "sigma_host",
+          "L_hi"
+        ],
+        "accepted": false,
+        "written_theta": [
+          "r",
+          "K",
+          "kappa",
+          "sigma",
+          "delta",
+          "pi",
+          "lam"
+        ]
+      },
+      {
+        "proposed_names": [
+          "r",
+          "K",
+          "kappa",
+          "sigma",
+          "delta",
+          "pi",
+          "lam"
+        ],
+        "refused_hits": [],
+        "accepted": true,
+        "written_theta": [
+          "r",
+          "K",
+          "kappa",
+          "sigma",
+          "delta",
+          "pi",
+          "lam"
+        ]
+      },
+      {
+        "proposed_names": [
+          "r",
+          "K",
+          "kappa",
+          "sigma",
+          "delta",
+          "pi",
+          "lam",
+          "beta"
+        ],
+        "refused_hits": [
+          "beta"
+        ],
+        "accepted": false,
+        "written_theta": [
+          "r",
+          "K",
+          "kappa",
+          "sigma",
+          "delta",
+          "pi",
+          "lam"
+        ]
+      }
+    ]
+  },
+  "units": "dimensionless cartoon; time in arbitrary days"
+}

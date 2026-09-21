@@ -1,0 +1,41 @@
+cff-version: 1.2.0
+message: "If you cite this computational research thesis, please use the metadata below. No DOI is minted here; do not invent one."
+type: thesis
+title: "Immunometabolic tumour-immune interaction ODEs under explicit non-parameters: lactate, checkpoint proxies, and host constraints that must not enter Theta"
+authors:
+  - family-names: Ogbonna
+    given-names: Kelechi Emeka
+    email: kelechiogbonna300@gmail.com
+    alias: cloudynirvana
+abstract: >-
+  Can lactate, checkpoint proxies, and host constraints stay as
+  refuse-as-parameter evidence objects that change hypothesis rank without
+  entering Theta as kinetic parameters? On a toy tumour-immune-lactate ODE,
+  a checkpoint label moves the winning legal structure, and a host lactate
+  band can block that move, while Theta stays length 7. An illegal fit that
+  adds a lactate-suppression coefficient lowers the residual and is refused
+  by the ledger. Not a medical device. Not a dose.
+keywords:
+  - immunometabolism
+  - lactate
+  - tumour-immune ODE
+  - checkpoint proxy
+  - parameter identifiability
+  - hypothesis rank
+  - refuse-as-parameter
+  - computational oncology
+  - research-only
+license: MIT
+date-released: "2026-09-21"
+url: "https://github.com/cloudynirvana/thesis-10-immunometabolic-refuse-as-parameter"
+repository-code: "https://github.com/cloudynirvana/thesis-10-immunometabolic-refuse-as-parameter"
+preferred-citation:
+  type: thesis
+  title: "Immunometabolic tumour-immune interaction ODEs under explicit non-parameters: lactate, checkpoint proxies, and host constraints that must not enter Theta"
+  authors:
+    - family-names: Ogbonna
+      given-names: Kelechi Emeka
+  year: 2026
+  month: 9
+  url: "https://github.com/cloudynirvana/thesis-10-immunometabolic-refuse-as-parameter"
+  notes: "Thesis #10 (was R3). Computational research. Lactate, checkpoint proxies, and host constraints are not kinetic parameters. No document DOI."

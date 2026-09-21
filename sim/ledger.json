@@ -1,0 +1,202 @@
+{
+  "object": "refuse-as-parameter ledger",
+  "refused_names": [
+    "beta",
+    "gamma",
+    "eta",
+    "phi",
+    "L_lo",
+    "L_hi",
+    "sigma_host",
+    "checkpoint"
+  ],
+  "legal_theta_names": [
+    "r",
+    "K",
+    "kappa",
+    "sigma",
+    "delta",
+    "pi",
+    "lam"
+  ],
+  "constants": {
+    "phi": 0.55,
+    "sigma_host": 0.2,
+    "sigma_supply_alt": 0.35,
+    "band_loose": [
+      0.0,
+      1.5
+    ],
+    "band_tight": [
+      0.0,
+      0.45
+    ]
+  },
+  "evidence_objects": [
+    {
+      "id": "ev.lactate",
+      "kind": "trajectory",
+      "channels": [
+        "L"
+      ],
+      "role": "recorded series and host band; not a kinetic coefficient",
+      "bands": {
+        "loose": [
+          0.0,
+          1.5
+        ],
+        "tight": [
+          0.0,
+          0.45
+        ]
+      }
+    },
+    {
+      "id": "ev.checkpoint",
+      "kind": "categorical_proxy",
+      "levels": [
+        "absent",
+        "present"
+      ],
+      "role": "selects whether M_ck is in the candidate set; not a rate and not a dose",
+      "phi_if_present": 0.55
+    },
+    {
+      "id": "ev.host",
+      "kind": "inequality",
+      "statement": "sigma <= sigma_host",
+      "sigma_host": 0.2,
+      "role": "feasibility mask; the ceiling is not estimated"
+    }
+  ],
+  "proposals": [
+    {
+      "proposed_names": [
+        "r",
+        "K",
+        "kappa",
+        "sigma",
+        "delta",
+        "pi",
+        "lam",
+        "beta",
+        "gamma",
+        "eta"
+      ],
+      "refused_hits": [
+        "beta",
+        "gamma",
+        "eta"
+      ],
+      "accepted": false,
+      "written_theta": [
+        "r",
+        "K",
+        "kappa",
+        "sigma",
+        "delta",
+        "pi",
+        "lam"
+      ]
+    },
+    {
+      "proposed_names": [
+        "r",
+        "K",
+        "kappa",
+        "sigma",
+        "delta",
+        "pi",
+        "lam",
+        "phi"
+      ],
+      "refused_hits": [
+        "phi"
+      ],
+      "accepted": false,
+      "written_theta": [
+        "r",
+        "K",
+        "kappa",
+        "sigma",
+        "delta",
+        "pi",
+        "lam"
+      ]
+    },
+    {
+      "proposed_names": [
+        "r",
+        "K",
+        "kappa",
+        "sigma",
+        "delta",
+        "pi",
+        "lam",
+        "sigma_host",
+        "L_hi"
+      ],
+      "refused_hits": [
+        "sigma_host",
+        "L_hi"
+      ],
+      "accepted": false,
+      "written_theta": [
+        "r",
+        "K",
+        "kappa",
+        "sigma",
+        "delta",
+        "pi",
+        "lam"
+      ]
+    },
+    {
+      "proposed_names": [
+        "r",
+        "K",
+        "kappa",
+        "sigma",
+        "delta",
+        "pi",
+        "lam"
+      ],
+      "refused_hits": [],
+      "accepted": true,
+      "written_theta": [
+        "r",
+        "K",
+        "kappa",
+        "sigma",
+        "delta",
+        "pi",
+        "lam"
+      ]
+    },
+    {
+      "proposed_names": [
+        "r",
+        "K",
+        "kappa",
+        "sigma",
+        "delta",
+        "pi",
+        "lam",
+        "beta"
+      ],
+      "refused_hits": [
+        "beta"
+      ],
+      "accepted": false,
+      "written_theta": [
+        "r",
+        "K",
+        "kappa",
+        "sigma",
+        "delta",
+        "pi",
+        "lam"
+      ]
+    }
+  ]
+}
